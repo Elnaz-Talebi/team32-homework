@@ -8,6 +8,8 @@ Welcome to the Malichimp Project! This web application features a top-mounted se
 - **Dynamic Results Section**: search box results.
 - **Informative Footer**: Contains contact information, additional resources about the project, and other relevant links.
 
+## UX design
+[Figma](https://www.figma.com/design/GmzWUSaw6A9eOIrGfQodv3/10-Real-Search-Results-Pages---Github%2C-Loom%2C-Notion-%26-more-(Community)?node-id=501-233&t=e20U3VOIZHpeB6cZ-0)
 ## Project Structure
 
 Below is the organization of files within this project:
