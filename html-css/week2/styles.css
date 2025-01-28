@@ -183,7 +183,7 @@ main{
 
 .button-contact:hover {
     background-color: rgba(0, 124, 137, 1);
-    color: rgba(246, 246, 244, 1);
+    color: rgb(246, 246, 244);
 }
 .button-ask-me {
     width: 242.42px;
