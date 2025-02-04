@@ -1,4 +1,4 @@
-# Project README :page_facing_up:
+# Project README
 
 Here, you will find four separate projects that showcase different programming challenges. Below is a brief overview of each project:
 
