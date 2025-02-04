@@ -180,6 +180,11 @@ main{
     cursor: pointer;
 
 }
+
+.button-contact:hover {
+    background-color: rgba(0, 124, 137, 1);
+    color: rgb(246, 246, 244);
+}
 .button-ask-me {
     width: 242.42px;
     height: 44px;
