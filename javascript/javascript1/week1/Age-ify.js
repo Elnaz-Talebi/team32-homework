@@ -1,4 +1,4 @@
-let yearOfBirth = 1987;
-let yearFuture = 2044;
-let age = yearFuture - yearOfBirth;
+const yearOfBirth = 1987;
+const yearFuture = 2044;
+const age = yearFuture - yearOfBirth;
 console.log(`You will be ${age} years old in ${yearFuture}`);
