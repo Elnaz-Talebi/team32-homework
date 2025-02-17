@@ -6,10 +6,11 @@ function getEventWeekday(days) {
 
 
 
-    console.log(weekdayArray[dayIndex])
+    return(weekdayArray[dayIndex])
 
 }
-getEventWeekday(1)
-getEventWeekday(10)
-getEventWeekday(2)
-getEventWeekday(6)
+
+console.log(getEventWeekday(1))
+console.log(getEventWeekday(10))
+console.log(getEventWeekday(2))
+console.log(getEventWeekday(6))
