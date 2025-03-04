@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>recipe-app</title>
+    
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#recipe">Recipe</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="about" class="top-page">
+      <input type="text" placeholder="Search..">
+      <input id="button-insert" class="btn_recipe" type="button" value="Insert recipe" />
+    </section>
+    <section>
+      <form id="recipe-form">
+        <fieldset>
+          <label for="title"
+            >Title: <input name="title" placeholder="Title of your recipe"
+          /></label>
+          <label for="picture-url"
+            >Picture URL:<input
+              name="picture-url"
+              placeholder="Picture-url of your recipe"
+          /></label>
+          <label
+            >Category:
+            <select>
+              <option value="">(select one option)</option>
+              <option value="asian">Asian</option>
+              <option value="chinese">Chinese</option>
+              <option value="japanese">Japanese</option>
+              <option value="korean">Korean</option>
+              <option value="indian">Indian</option>
+              <option value="middle-eastern">Middle Eastern</option>
+              <option value="european">European</option>
+              <option value="mediterranean">Mediterranean</option>
+              <option value="latin-american">Latin American</option>
+              <option value="american">American</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset class="ing-amo">
+  
+          <label for="ingredients">Ingredients:<input name="ingredients0" placeholder="Ingredients of your recipe"/></label>
+          <label for="amount">Amounts:<input name="amount0" placeholder="Amounts of your recipe"/></label>
+
+          <label><input name="ingredients1" placeholder="Ingredients of your recipe"/></label>
+          <label><input name="amount1" placeholder="Amounts of your recipe"/></label>
+
+          <label><input name="ingredients2" placeholder="Ingredients of your recipe"/></label>
+          <label><input name="amount2" placeholder="Amounts of your recipe"/></label>
+
+          <label><input name="ingredients3" placeholder="Ingredients of your recipe"/></label>
+          <label><input name="amount3" placeholder="Amounts of your recipe"/></label> 
+
+          <label><input name="ingredients4" placeholder="Ingredients of your recipe"/></label>
+          <label><input name="amount4" placeholder="Amounts of your recipe"/></label>
+
+        </fieldset>
+        <fieldset>
+          <label for="description"
+            >Description:
+            <textarea
+              name="description"
+              rows="10"
+              cols="80"
+              placeholder="Description of your recipe"
+            ></textarea>
+          </label>
+          <input id="submit" type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    </section>
+    <section id="recipe"></section>
+    <footer id="contact"></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
