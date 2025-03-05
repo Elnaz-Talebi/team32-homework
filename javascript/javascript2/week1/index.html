@@ -18,22 +18,17 @@
       </nav>
     </header>
     <section id="about" class="top-page">
-      <input type="text" placeholder="Search..">
+
+      <p class="about-me">Welcome to [Website name], the ultimate destination for food lovers! Here, anyone can share their favorite recipes and discover new dishes from around the world. Explore recipes by category, connect with fellow food enthusiasts, and bring delicious creations to life in your kitchen. Whether you're a seasoned chef or a home cook, there's a place for you here!</p>
+      <input class="search-box" type="text" placeholder="Search..">
       <input id="button-insert" class="btn_recipe" type="button" value="Insert recipe" />
     </section>
     <section>
-      <form id="recipe-form">
-        <fieldset>
-          <label for="title"
-            >Title: <input name="title" placeholder="Title of your recipe"
-          /></label>
-          <label for="picture-url"
-            >Picture URL:<input
-              name="picture-url"
-              placeholder="Picture-url of your recipe"
-          /></label>
-          <label
-            >Category:
+      <form id="recipe-form" >
+        <fieldset class="form_section">
+          <label for="title">Title:<input name="title" placeholder="Title of your recipe"/></label>
+          <label for="picture-url">Picture URL:<input name="picture-url" placeholder="Picture-url of your recipe"/></label>
+          <label>Category:
             <select>
               <option value="">(select one option)</option>
               <option value="asian">Asian</option>
@@ -49,7 +44,7 @@
             </select>
           </label>
         </fieldset>
-        <fieldset class="ing-amo">
+        <fieldset class="ing-amo form_section">
   
           <label for="ingredients">Ingredients:<input name="ingredients0" placeholder="Ingredients of your recipe"/></label>
           <label for="amount">Amounts:<input name="amount0" placeholder="Amounts of your recipe"/></label>
@@ -67,7 +62,7 @@
           <label><input name="amount4" placeholder="Amounts of your recipe"/></label>
 
         </fieldset>
-        <fieldset>
+        <fieldset class="form_section">
           <label for="description"
             >Description:
             <textarea
@@ -77,7 +72,7 @@
               placeholder="Description of your recipe"
             ></textarea>
           </label>
-          <input id="submit" type="submit" value="Submit" />
+          <button class="sub-btn" id="submit" type="submit">Add recipe</button>
         </fieldset>
       </form>
     </section>

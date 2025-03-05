@@ -69,6 +69,8 @@ submitButton.addEventListener("click", function (event) {
   const data = Object.fromEntries(new FormData(form));
   const recipe = convertFormToObject(data);
   recipeList.push(recipe);
+  let insertForm = document.getElementById("recipe-form");
+  insertForm.style.display = "none";
   renderRecipe();
 });
 

@@ -6,6 +6,9 @@ body {
   color: black;
   font-family: Tahoma;
   font-size: 16px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 header {
   width: 100%;
@@ -43,37 +46,74 @@ li > a {
   color: inherit;
   text-decoration: none;
 }
-
-section{
-  display: flex;
-  width: 100%;
-}
 .top-page{
-  display: flex;
-  width: 80%;
+  box-shadow: 10px 10px 30px gray;
+  border-radius: 5px;
+  width: 70%;
+  display: grid;
+  grid-template:  "p p btn" auto  
+                  "p p btn" auto
+                  "search search search" auto / 65% 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+  margin: 50px auto 30px auto;
   
 }
-.btn_recipe{
-  width: 8rem;
-  height: 3rem;
-
+.about-me{
+  grid-area: p;
+  padding: 10px;
 }
 
-form {
+.search-box{
+  grid-area: search;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn_recipe{
+  grid-area: btn;
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 5px;
+  width: fit-content;
+  justify-self: center;
+  align-self: center;
+}
+
+#recipe-form {
+  display:none;
+  padding: 40px;
+  box-shadow: 10px 10px 30px gray;
+  border-radius: 5px;
+
+  
+}
+.form_section{
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
   width: 60vw;
   max-width: 500px;
   min-width: 300px;
   margin: 0 auto;
   padding-bottom: 2em;
-}
-fieldset {
-  border: none;
-  padding: 2rem 0;
-  border-bottom: 3px solid #3b3b4f;
-}
-label {
-  display: block;
-  margin: 0.5rem 0;
+  label{
+      display: block;
+      margin: 0.5rem 0;
+  }
+  input, select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    font-family: Tahoma;
+  }
+  textarea {
+    margin: 20px;
+    width: 92%;
+    min-height: 2em;
+    font-family: Tahoma;
+  }
+
 }
 fieldset:last-of-type {
   border-bottom: none;
@@ -84,23 +124,16 @@ fieldset:last-of-type {
   margin: 0.5rem;
 }
 
-input,
-textarea,
-select {
-  margin: 10px 0 0 0;
-  width: 100%;
-  min-height: 2em;
-  font-family: Tahoma;
-}
-input[type="submit"] {
+
+.sub-btn {
   display: block;
-  width: 60%;
+  width: 40%;
   margin: 1em auto;
   height: 2em;
   font-size: 1.1rem;
   background-color: white;
   border-color: white;
-  min-width: 300px;
+ 
 }
 
 
@@ -111,6 +144,4 @@ footer {
 }
 
 
-#recipe-form {
-  display:none
-}
+
