@@ -1,24 +1,30 @@
 
-const firstname = "Eli"
+const firstName = "Eli"
 const surname = "Talebi"
-function getFullname2(firstname, surname, useFormalName, isfemale){
+function getFullname2(firstName, surname, useFormalName, isFemale){
+  if(firstName && surname ){
     let prefix = "";
-  if (useFormalName){
-    if (isfemale){
-        prefix = "Lady"
+    if (useFormalName){
+      if (isFemale){
+          prefix = "Lady"
+      }
+      else {
+          prefix = "Lord"
+      } 
     }
-    else {
-        prefix = "Lord"
-    } 
+  return `${prefix} ${firstName} ${surname}`
   }
-return `${prefix} ${firstname} ${surname}`
+  else {
+    console.log(`Pleas provide your name and surname`)
+  }
+  
 };
 
-fullname1 = getFullname2(firstname, surname, true,true);
-fullname2 = getFullname2(firstname, surname, true,false);
-fullname3 = getFullname2(firstname, surname, false,true);
-fullname4 = getFullname2(firstname, surname, false, false);
-fullname5 = getFullname2(firstname, surname);
+fullname1 = getFullname2(firstName, surname, true,true);
+fullname2 = getFullname2(firstName, surname, true,false);
+fullname3 = getFullname2(firstName, surname, false,true);
+fullname4 = getFullname2(firstName, surname, false, false);
+fullname5 = getFullname2(firstName, surname);
 console.log(fullname1)
 console.log(fullname2)
 console.log(fullname3)
