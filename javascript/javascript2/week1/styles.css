@@ -6,10 +6,10 @@ body {
   color: black;
   font-family: Tahoma;
   font-size: 16px;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  align-items: center;
 }
+
 header {
   width: 100%;
   height: 50px;
@@ -17,9 +17,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position:relative;
+  position: relative;
   top: 0;
+  h1 {
+    position: relative;
+    top: 26px;
+    left: 31px;
+    font-family: "fangsong";
+    font-size: 3rem;
+    color: #a35656;
+  }
 }
+
 nav {
   width: 50%;
   max-width: 300px;
@@ -42,53 +51,67 @@ nav > ul > li {
   padding: 0.2rem;
   display: block;
 }
+
 li > a {
   color: inherit;
   text-decoration: none;
 }
-.top-page{
-  box-shadow: 10px 10px 30px gray;
+
+.logo {
+  position: relative;
+  width: 50%;
+  max-width: 130px;
+  height: 130px;
+  top: 66px;
+  left: 31px;
+  box-shadow: 9px 9px 25px rgb(172, 151, 123);
+  border-radius: 5px;
+}
+
+.top-page {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 30px rgb(172, 151, 123);
   border-radius: 5px;
   width: 70%;
-  display: grid;
-  grid-template:  "p p btn" auto  
-                  "p p btn" auto
-                  "search search search" auto / 65% 1fr 1fr;
   gap: 10px;
   padding: 20px;
-  margin: 50px auto 30px auto;
-  
+  margin: 90px auto 30px auto;
 }
-.about-me{
+
+.about-me {
   grid-area: p;
   padding: 10px;
 }
 
-.search-box{
+.search-box {
   grid-area: search;
   padding: 10px;
   border-radius: 5px;
 }
 
-.btn_recipe{
-  grid-area: btn;
-  padding: 5px 15px;
+.btn_recipe {
+  margin-left: auto;
+  margin-right: 3rem;
+  background-color: #f7d9c5;
+  border: none;
+  box-shadow: 9px 9px 25px rgb(172, 151, 123);
   text-align: center;
   border-radius: 5px;
-  width: fit-content;
+  width: 12rem;
+  height: 2.3rem;
   justify-self: center;
   align-self: center;
 }
 
 #recipe-form {
-  display:none;
+  display: none;
   padding: 40px;
   box-shadow: 10px 10px 30px gray;
   border-radius: 5px;
-
-  
 }
-.form_section{
+
+.form_section {
   border: none;
   padding: 2rem 0;
   border-bottom: 3px solid #3b3b4f;
@@ -97,11 +120,12 @@ li > a {
   min-width: 300px;
   margin: 0 auto;
   padding-bottom: 2em;
-  label{
-      display: block;
-      margin: 0.5rem 0;
+  label {
+    display: block;
+    margin: 0.5rem 0;
   }
-  input, select {
+  input,
+  select {
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
@@ -113,17 +137,16 @@ li > a {
     min-height: 2em;
     font-family: Tahoma;
   }
-
 }
+
 fieldset:last-of-type {
   border-bottom: none;
 }
 
-.ing-amo label{
+.ing-amo label {
   display: inline-grid;
   margin: 0.5rem;
 }
-
 
 .sub-btn {
   display: block;
@@ -133,9 +156,93 @@ fieldset:last-of-type {
   font-size: 1.1rem;
   background-color: white;
   border-color: white;
- 
 }
 
+.title-section-food {
+  margin-left: 50px;
+  display: flex;
+  h2{
+    font-weight: lighter;
+    
+  }
+}
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 3rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  padding: 4rem 0;
+}
+
+.every-recipe {
+  box-shadow: 9px 9px 25px rgb(172, 151, 123);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: rgb(240, 232, 222);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40vw;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content-details {
+  padding: 10px;
+  text-align: center;
+  img {
+    width: 17rem;
+    height: 17rem;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+.bold{
+  font-weight:bold ;
+}
 
 footer {
   background-color: #f7d9c5;
@@ -143,5 +250,8 @@ footer {
   justify-content: center;
 }
 
-
-
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 70vw;
+  }
+}

@@ -33,28 +33,18 @@ function renderRecipe() {
 
   recipeList.forEach((item) => {
     let parent = document.createElement("div");
+    parent.classList.add("every-recipe");
+    parent.addEventListener("click", () => {
+      showModal(item);
+    });
 
-    let h1 = document.createElement("h1");
-    h1.innerHTML = item.title;
-    parent.appendChild(h1);
+    let h3 = document.createElement("h3");
+    h3.innerHTML = item.title;
+    parent.appendChild(h3);
 
     let img = document.createElement("img");
     img.src = item.picture_url;
     parent.appendChild(img);
-
-    let p = document.createElement("p");
-    p.innerHTML = item.description;
-    parent.appendChild(p);
-
-    let ingDiv = document.createElement("div");
-    item.ingredients.forEach((value) => {
-        if(value?.NAME){
-            let p = document.createElement("p");
-            p.innerHTML = `${value.NAME}: ${value.AMOUNT}`;
-            ingDiv.appendChild(p);
-        }
-    });
-    parent.appendChild(ingDiv);
 
     secRecipe.appendChild(parent);
   });
@@ -92,4 +82,46 @@ function convertFormToObject(formData) {
   }
 
   return result;
+}
+
+function showModal(item) {
+  const modalDetails = document.getElementById("modal-details");
+  modalDetails.replaceChildren();
+
+  
+  let h3 = document.createElement("h3");
+  h3.innerHTML = item.title;
+  modalDetails.appendChild(h3);
+
+  let img = document.createElement("img");
+  img.src = item.picture_url;
+  modalDetails.appendChild(img);
+
+  let p = document.createElement("p");
+  p.innerHTML = "<p class='bold'>Description: </P>"+item.description;
+  modalDetails.appendChild(p);
+
+  let ingDiv = document.createElement("div");
+  let ingP = document.createElement("p");
+  ingP.innerHTML="Ingredients: ";
+  ingP.classList.add("bold");
+  ingDiv.appendChild(ingP);
+  item.ingredients.forEach((value) => {
+    if (value?.NAME) {
+      let p = document.createElement("p");
+      p.innerHTML = `${value.NAME}: ${value.AMOUNT}`;
+      ingDiv.appendChild(p);
+    }
+  });
+
+  modalDetails.appendChild(ingDiv);
+
+  const modal = document.getElementById("recipe-modal");
+  modal.style.display = "block";
+  console.log(item);
+}
+
+function hideModal() {
+  const modal = document.getElementById("recipe-modal");
+  modal.style.display = "none";
 }
