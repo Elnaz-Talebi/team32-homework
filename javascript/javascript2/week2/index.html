@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Spice Trails</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="logo"
+        src="https://raw.githubusercontent.com/Elnaz-Talebi/team32-homework/364e7ecd68560f1a758324848c7dee61c47c40e4/javascript/javascript2/week2/Pictures/logo%20web%20(2).png"
+        alt="Spice Trails Logo"
+      />
+      <h1>Spice Trails</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#recipe">Recipe</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="about" class="top-page">
+      <p class="about-me">
+        Welcome to Spice Trails, the ultimate destination for food lovers! Here,
+        anyone can share their favorite recipes and discover new dishes from
+        around the world. Explore recipes by category, connect with fellow food
+        enthusiasts, and bring delicious creations to life in your kitchen.
+        Whether you're a seasoned chef or a home cook, there's a place for you
+        here!
+      </p>
+      <div class="search-box">
+        <input
+          id="text-box"
+          type="search"
+          placeholder="Search.."
+          onchange="search()"
+        />
+        <button
+          id="search-button"
+          class="search-button"
+          type="button"
+          onclick="search()"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </section>
+    <section class="title-box">
+      <h2>All our recipes from all over the world..</h2>
+    </section>
+    <section>
+      <form id="recipe-form">
+        <span id="recipe-form-close" class="close">&times;</span>
+        <fieldset class="form_section">
+          <label for="title"
+            >Title:<input
+              name="title"
+              placeholder="Title of your recipe"
+              required
+          /></label>
+          <label for="picture-url"
+            >Picture URL:<input
+              name="picture-url"
+              placeholder="Picture-url of your recipe"
+          /></label>
+          <label
+            >Category:
+            <select required>
+              <option value="">(select one option)</option>
+              <option value="asian">Asian</option>
+              <option value="chinese">Chinese</option>
+              <option value="japanese">Japanese</option>
+              <option value="korean">Korean</option>
+              <option value="indian">Indian</option>
+              <option value="middle-eastern">Middle Eastern</option>
+              <option value="european">European</option>
+              <option value="mediterranean">Mediterranean</option>
+              <option value="latin-american">Latin American</option>
+              <option value="american">American</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset class="ing-amo form_section">
+          <div id="ingredients-container">
+            <div class="ingredients-item">
+              <label for="ingredients"
+                >Ingredients:<input
+                  name="ingredients0"
+                  placeholder="Ingredients of your recipe"
+                  required
+              /></label>
+              <label for="amount"
+                >Amounts:<input
+                  name="amount0"
+                  placeholder="Amounts of your recipe"
+                  required
+              /></label>
+              <label for="units"
+                >Units:
+                <select name="unit0">
+                  <option value="">pieces</option>
+                  <option>g</option>
+                  <option>kg</option>
+                  <option>cloves</option>
+                  <option>tbsp</option>
+                  <option>tsp</option>
+                  <option>l</option>
+                  <option>ml</option>
+                  <option>pinch</option>
+                  <option>bottles</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <button
+            id="button-add-ingredient"
+            class="btn-add-ingredient"
+            type="button"
+          >
+            <i class="fa-solid fa-square-plus"></i>  Add more ingredients
+          </button>
+        </fieldset>
+        <fieldset class="form_section">
+          <label for="description"
+            >Description:
+            <textarea
+              name="description"
+              rows="10"
+              cols="80"
+              placeholder="Description of your recipe"
+              required
+            ></textarea>
+          </label>
+          <button class="sub-btn" id="submit" type="submit">Add recipe</button>
+        </fieldset>
+      </form>
+    </section>
+    <section class="search-sort">
+      <div id="type-filter-container"></div>
+
+      <div>
+        <button id="button-sort" class="btn_sort" type="button">
+          <i class="fa-solid fa-arrows-up-down"></i>
+        </button>
+        <input
+          id="button-insert"
+          class="btn_recipe"
+          type="button"
+          value="Insert your recipe"
+        />
+      </div>
+    </section>
+    <section id="recipe" class="recipe-list" data-sort="none"></section>
+    <div id="recipe-modal" class="modal">
+      <div class="modal-content">
+        <span id="recipe-modal-close" class="close">&times;</span>
+        <div class="modal-content-details" id="modal-details"></div>
+      </div>
+    </div>
+    <footer id="contact"></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
