@@ -182,7 +182,7 @@ function showModal(item) {
   item.ingredients.forEach((value) => {
     if (value?.NAME) {
       const p = document.createElement("p");
-      p.textContent = `${value.NAME}: ${value.AMOUNT} - ${value.UNIT}` ;
+      p.textContent = `${value.NAME}: ${value.AMOUNT} - ${value.UNIT}`;
       ingredientDiv.appendChild(p);
     }
   });
@@ -253,8 +253,10 @@ async function fetchApiDataAsync() {
     const response = await fetch(
       "https://raw.githubusercontent.com/Elnaz-Talebi/team32-homework/refs/heads/javascript-javascript3-week1/javascript/javascript3/week1/database.json"
     );
-    const data = await response.json();
-    initData(data);
+    if (response.status === 200) {
+      const data = await response.json();
+      initData(data);
+    }
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -301,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function () {
           (a, b) => b.ingredients.length - a.ingredients.length
         );
         break;
-      case "desc":
+      default:
         this.innerHTML = '<i class="fa-solid fa-arrows-up-down"></i>';
         recipeElement.dataset.sort = "none";
         sortedList = searchList.sort((a, b) => a.id - b.id);

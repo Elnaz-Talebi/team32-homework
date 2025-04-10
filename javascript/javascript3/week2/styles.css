@@ -3,9 +3,9 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #f7eee6;
-  background-image: url("https://raw.githubusercontent.com/Elnaz-Talebi/team32-homework/854be0c3a3198afd5d989e1f08773a167edb5497/javascript/javascript3/week1/Pictures/background.png");
+  background-image: url(./Pictures/background.png);
   color: black;
-  font-family: "Roboto", sans-serif;;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -84,11 +84,11 @@ li > a {
   padding: 20px;
 }
 
-.box1{
+.box1 {
   margin: 135px auto 30px auto;
 }
 
-.box2{  
+.box2 {
   margin: 22px auto 30px auto;
 }
 
@@ -99,14 +99,16 @@ li > a {
 
 .search-box {
   input {
-  padding: 10px;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-  width: 95%;
-  border: 1px solid grey;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 95%;
+    border: 1px solid grey;
   }
 
-  input:focus{outline: none;}
+  input:focus {
+    outline: none;
+  }
 }
 
 .search-button {
@@ -123,12 +125,14 @@ li > a {
   background-color: #f7d9c5;
 }
 
-.title-box{
+.title-box {
   text-align: center;
-  color:#7d3a3a;
+  color: #7d3a3a;
 }
 
-.btn_recipe, .btn_sort, .btn-add-ingredient {
+.btn_recipe,
+.btn_sort,
+.btn-add-ingredient {
   margin-right: 1rem;
   background-color: #f7d9c5;
   border: none;
@@ -142,14 +146,13 @@ li > a {
 
 .btn-add-ingredient {
   margin-top: 2.3rem;
-  i{
+  i {
     padding-right: 10px;
   }
 }
 
 .btn_selected {
   background-color: #fac099;
-
 }
 
 .btn-remove {
@@ -198,7 +201,7 @@ li > a {
   }
 }
 
-.form_section{
+.form_section {
   select {
     margin: 10px 0 0 0;
     width: 101.5%;
@@ -233,22 +236,20 @@ fieldset:last-of-type {
   box-shadow: 9px 9px 25px rgb(172, 151, 123);
   text-align: center;
   border-radius: 5px;
-
 }
 
-.search-sort{
+.search-sort {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
- 
+
   div {
     display: flex;
     span {
-      margin:10px;
+      margin: 10px;
       font-size: 14px;
     }
-
   }
 }
 
@@ -287,16 +288,16 @@ fieldset:last-of-type {
     left: 0;
     right: 0;
     font-size: 2.5rem;
-    color:white;
+    color: white;
   }
 }
 
-.every-recipe:hover{
+.every-recipe:hover {
   opacity: 60%;
-  
+
   i {
     display: block;
-    
+
     opacity: 100%;
   }
 }
@@ -347,12 +348,12 @@ fieldset:last-of-type {
   }
   p {
     text-align: left;
-    margin: 0.6rem
+    margin: 0.6rem;
   }
 }
 
-.bold{
-  font-weight:bold ;
+.bold {
+  font-weight: bold;
 }
 
 footer {
@@ -370,7 +371,7 @@ footer {
     display: grid;
     flex-direction: column;
     justify-content: right;
-   margin: 0;
+    margin: 0;
   }
 
   .hamburger-bar {
@@ -383,16 +384,15 @@ footer {
     width: 70vw;
   }
 
-  .search-sort{
+  .search-sort {
     display: flex;
-    gap: 15PX;
+    gap: 15px;
     justify-content: space-around;
 
-    div{
+    div {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      
     }
   }
 
@@ -402,9 +402,9 @@ footer {
     top: 50px;
     left: 38px;
   }
-  
-  header{
-    h1{
+
+  header {
+    h1 {
       font-size: 2rem;
       text-align: center;
       left: 49px;
@@ -415,23 +415,22 @@ footer {
     padding: 0.7em;
   }
 
-  .search-box{
-    input{
+  .search-box {
+    input {
       width: 88.5%;
     }
   }
 
   .search-button {
     width: 34px;
-    }
+  }
 
   .recipe-list {
     display: grid;
-  grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .title-box {
     margin: 0 20px 0 20px;
-
   }
 }
